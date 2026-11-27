@@ -28,3 +28,13 @@ Install [GLFW](https://formulae.brew.sh/formula/glfw) and [CMake](https://formul
 ```sh
 brew install glfw cmake
 ```
+
+### Jolt Physics for chapter 2 onward
+
+With Git, CMake, and a native C++ compiler installed, run this command once from the project root before starting chapter 2. On Windows, use a Visual Studio Developer PowerShell with the Desktop development with C++ workload installed.
+
+```sh
+cmake -P scripts/setup_jolt_physics.cmake
+```
+
+The script downloads [Jolt v5.7.0](https://github.com/jrouwe/JoltPhysics/releases/tag/v5.7.0) into `temp/JoltPhysics/`, builds a Release shared library with RTTI and the debug renderer, and installs it under `ThirdParty/JoltPhysics/v5.7.0/<os>-<arch>-release/`. Rerunning it reuses the source and build. Chapter 1 can run independently.
