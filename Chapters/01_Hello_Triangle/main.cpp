@@ -161,4 +161,6 @@ int main()
     glDeleteProgram(program);
     glfwDestroyWindow(window);
     glfwTerminate();
+
+    return 0;
 }
